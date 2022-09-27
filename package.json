@@ -1,0 +1,30 @@
+{
+  "name": "frontAndBackBoilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:client": "webpack serve --env development",
+    "dev:server": "nodemon server/src/index.ts --ignore 'client/'",
+    "build:client": "rm -rf ./client/build && webpack --env production",
+    "build:server": "webpack --config webpack.server.config.js --env production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "@babel/preset-typescript": "^7.18.6",
+    "babel-loader": "^8.2.5",
+    "copy-webpack-plugin": "^11.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.74.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
